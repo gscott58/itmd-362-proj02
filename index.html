@@ -1,8 +1,8 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Illinois Institute of Technology Login</title>
-
+  <meta charset="UTF-8">
 	<script language="JavaScript" src="https://my.iit.edu/js/clientsniffer.js"></script>
 	<script language="JavaScript" src="https://my.iit.edu/js/util.js"></script>
 	<script language="JavaScript" src="https://my.iit.edu/js/iit_functions.js"></script>
@@ -109,16 +109,26 @@
 	<link rel="stylesheet" href="https://my.iit.edu/misc/style.css" type="text/css">
 	<link rel="stylesheet" href="https://my.iit.edu/custom/iit-iv/custom.css" type="text/css">
 	<link rel="stylesheet" href="https://my.iit.edu/cp/content/style.css" type="text/css">
+	<meta name="viewport" content="initial-scale=1.0,width=device-width">
 	<style>
+		#main-content {
+			height: 650px;
+			margin-left: 10px;
+			margin-right: 10px;
+			background-image: url("img/iit-banner-photo-2.jpg");
+			background-size: cover;         /*set bg image cover entire page */
+			backgroung-repeat: no-repeat;   /* do not repeat bg image */
+		}
 		#login_box_container {
 				margin-top:  100px;
 				margin-left: 450px;
-			}
+		}
 		#portal_title {
 				font-size:  2.0em;
-				margin-top: 50px;
+				color: #ffffff;
 				text-align: center;
-			}
+				
+		}
 	</style>
 	</head>
 
@@ -128,15 +138,17 @@
 		<table border="0" cellpadding="0" cellspacing="10" width="100%">
 			<tr>
 				<td valign="top">
-					<table border="0" cellpadding="0" cellspacing="0" width="100%">
-						<tr><td class="bg1" height="74"><DIV><table width="100%" border="0" cellpadding="0" cellspacing="0" background="https://my.iit.edu/media/iit/images/head_bkg_brw3.gif">  <tr>    <td><img src="https://my.iit.edu/media/iit/images/header_blk_red.gif" alt="My IIT " width="800" height="101" border="0" usemap="#Map" /></td>  </tr></table><map name="Map" id="Map">  <area shape="rect" coords="64,5,445,16" href="http://www.iit.edu/" /></map></DIV></td></tr>
-						<tr><td class="bg3"><img src="https://my.iit.edu/cps/images/misc/dot-blank.gif" height="3" width="1"></td></tr>
-						<tr><td><img src="https://my.iit.edu/cps/images/misc/dot-blank.gif" height="15" width="1"></td></tr>
-					</table>	
+	<!--Greg			<table border="0" cellpadding="0" cellspacing="0" width="100%">-->
+	<!--Greg			<tr><td class="bg1" height="74"><DIV><table width="100%" border="0" cellpadding="0" cellspacing="0" background="https://my.iit.edu/media/iit/images/head_bkg_brw3.gif">  <tr>    <td><img src="https://my.iit.edu/media/iit/images/header_blk_red.gif" alt="My IIT " width="800" height="101" border="0" usemap="#Map" /></td>  </tr></table><map name="Map" id="Map">  <area shape="rect" coords="64,5,445,16" href="http://www.iit.edu/" /></map></DIV></td></tr>-->
+	<!--Greg					<tr><td class="bg3"><img src="https://my.iit.edu/cps/images/misc/dot-blank.gif" height="3" width="1"></td></tr>-->
+	<!--Greg					<tr><td><img src="https://my.iit.edu/cps/images/misc/dot-blank.gif" height="15" width="1"></td></tr>-->
+		</table>	
 					<!-- *** *** -->
-					
-					<link rel="stylesheet" href="https://my.iit.edu/media/org/jasig/portal/layout/tab-column/nested-tables/cp/skin/cp.css" type="text/css">
+					<link rel="stylesheet" href="https://my.iit.edu/media/org/jasig/portal/layout/tab-column/nested-tables/cp/skin/cp.css" type="text/css"> 
+
 <!-- Greg -->
+
+<div id="main-content">
 
 <h1 id="portal_title">Myiit Student Portal</h1>
 
@@ -198,26 +210,18 @@
 		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
 		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
 		</script>
+		
 		<script type="text/javascript">
 		try {
 		var pageTracker = _gat._getTracker("UA-10917923-3");
 		pageTracker._trackPageview();
 		} catch(err) {}</script>
 
-					
-					
 					<!-- *** *** -->
+			
 					<table width="100%" cellpadding="0" cellspacing="0" border="0">
 						<tr><td><img src="https://my.iit.edu/cps/images/misc/dot-blank.gif" width="1" height="5"></td></tr>
 						<tr><td>
-
-
-		 
-
-
-
-
-
 			<table width="100%" cellpadding="5" cellspacing="5" border="0">
 				<tr><td colspan="3"><img src="https://my.iit.edu/cps/images/misc/dot-blank.gif" title="" width="1" height="5"></td></tr>
 				<tr>
@@ -241,5 +245,6 @@
 				</td>
 			</tr>
 		</table>
+</div>
 	</body>
 </html>
