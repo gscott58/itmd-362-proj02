@@ -3,10 +3,10 @@
 	<head>
 		<title>My IIT Student Login</title>
 		<meta charset="UTF-8">
-		<script language="JavaScript" src="https://my.iit.edu/js/clientsniffer.js"></script>
-		<script language="JavaScript" src="https://my.iit.edu/js/util.js"></script>
-		<script language="JavaScript" src="https://my.iit.edu/js/iit_functions.js"></script>
-		<script language="javascript1.1">
+		<script src="https://my.iit.edu/js/clientsniffer.js"></script>
+		<script src="https://my.iit.edu/js/util.js"></script>
+		<script src="https://my.iit.edu/js/iit_functions.js"></script>
+		<script>
 			<!-- (hide from old browsers)
 			var userpwdFocus = false;
 			var hasRecovery = true
@@ -109,12 +109,24 @@
 		<link rel="stylesheet" href="https://my.iit.edu/custom/iit-iv/custom.css" type="text/css">
 		<link rel="stylesheet" href="https://my.iit.edu/cp/content/style.css" type="text/css">
 		<link href="https://fonts.googleapis.com/css?family=Caveat+Brush" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet">
-		<link href="http://fonts.googleapis.com/css?family=Dancing+Script:700|EB+Garamond" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="https://my.iit.edu/cp/home/login" type="text/css">
 		<meta name="viewport" content="initial-scale=1.0,width=device-width">
 
-
 		<style>
+			body {
+				margin-top: 0;
+				margin-bottom: 0;
+				margin-left: 0;
+				margin-right: 0; 
+			}
+			table {
+				border: 0;
+				padding: 0;
+				border-spacing: 10px;
+				width: 100%;
+				border-bottom: 1px dotted #ccc;
+				max-width: 400px;
+			}
 		
 			#main-content {
 				height: 650px;
@@ -122,12 +134,14 @@
 				margin-right: 10px;
 				background-image: url("img/iit-banner-photo-2.jpg");
 				background-size: cover;         /*set bg image cover entire page */
-				backgroung-repeat: no-repeat;   /* do not repeat bg image */
+				background-repeat: no-repeat;   /* do not repeat bg image */
 			}
-
+			#leftColumn {
+				width: 50%;
+			}
 			#login_box_container {
 				margin-top:  6%;
-				margin-left: 	34%;
+				margin-left: 	29%;
 				margin-right: 33%;
 			}
 
@@ -148,129 +162,117 @@
 			.textform {
 				text-align: left;
 			}
-		
+
 		</style>
 	</head>
 
-	<body marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" onLoad="if (!hadFocus(false)) document.userid.user.focus();">
-		<a name="TOP"></a>
-		 <!-- <img src="http://email.iit.edu:6777/cmd.msc?sid=&mbox=&cmd=logout&laurel=on" width="1" height="1"> -->
-		<table border="0" cellpadding="0" cellspacing="10" width="100%">
-
-				<td valign="top">
-	<!--Greg			<table border="0" cellpadding="0" cellspacing="0" width="100%">-->
-	<!--Greg			<tr><td class="bg1" height="74"><DIV><table width="100%" border="0" cellpadding="0" cellspacing="0" background="https://my.iit.edu/media/iit/images/head_bkg_brw3.gif">  <tr>    <td><img src="https://my.iit.edu/media/iit/images/header_blk_red.gif" alt="My IIT " width="800" height="101" border="0" usemap="#Map" /></td>  </tr></table><map name="Map" id="Map">  <area shape="rect" coords="64,5,445,16" href="http://www.iit.edu/" /></map></DIV></td></tr>-->
-	<!--Greg					<tr><td class="bg3"><img src="https://my.iit.edu/cps/images/misc/dot-blank.gif" height="3" width="1"></td></tr>-->
-	<!--Greg					<tr><td><img src="https://my.iit.edu/cps/images/misc/dot-blank.gif" height="15" width="1"></td></tr>-->
-		</table>	
-					<!-- *** *** -->
+	<body onLoad="if (!hadFocus(false)) document.userid.user.focus();">
+		<a id="TOP"></a>
 					<link rel="stylesheet" href="https://my.iit.edu/media/org/jasig/portal/layout/tab-column/nested-tables/cp/skin/cp.css" type="text/css"> 
 
 <!-- Greg -->
 
-<div id="main-content">
+	<div id="main-content">
 
 
-		<h1 id="portal_title">My IIT Student Login</h1>
+			<h1 id="portal_title">My IIT Student Login</h1>
 
-		
-		<table id="login_box_container" width="33%" cellpadding="0" cellspacing="0" border="0" style="border-bottom: 1px dotted #ccc; max-width: 1200px;">
-
-				<tr>
-								
-						<td width="217" valign="top" align="center" id="leftColumn"><br />
-
-								<table width="325" cellpadding="0" cellspacing="0" border="0" style="padding-left: 5px; margin-left: 10px; ">
-
-										<tr >
-												<td id="sideHeader">Login</td>
-										</tr>
-										<tr>
-												<td id="sideContent">
-
-														<form name="userid" id="userid" onsubmit="xferFocus(this); return false;">
-																Username: <br />
-																<script language="JavaScript1.2" type="text/javascript">
-
-									document.writeln("<input class=\"textform\" type=\"text\" name=\"user\" size=\"" + size + "\" tabindex=1 onFocus=\"hadFocus(true);\"><br />");
-
-								</script>
-														</form>
-														<form action="https://my.iit.edu/cp/home/login" method="get" name="cplogin" id="cplogin" onsubmit="login(); return false;">
-																Password: <br />
-																<script language="JavaScript1.2" type="text/javascript">
-
-									document.writeln("<input class=\"textform\" type=\"password\" name=\"pass\" size=\"" + size + "\" tabindex=2 onFocus=\"hadFocus(true);\">");
-
-								</script>
-																<input type="hidden" name="user" value="" />
-																<input type="hidden" name="uuid" value=""/ >
-
-																<br />
-		<br>
-
-		<input type="button" class="btn" name="login_btn" value="Login" onclick="login();" tabindex="3"/>
-		<input type="button" class="btn" name="cancel_btn" value="Clear" onclick="doCancel();" tabindex="4"/>
-		<br><br>
-
-		<script language="JavaScript1.2">
-		 document.writeln("<span class=\"text10\" ><a href=\"https://my.iit.edu/cp/myqa/answer/start\" onMouseover=\"window.status=''; return true;\">Forget Password?</a></span>");
-		</script>
-		<br><br>
-														</form>
-												</td>
-<!-- Greg -->
-										</tr>
-										<tr>
-											 <td>&nbsp;</td> 
-		 <td align="center" colspan="2" class="btn">
-										</td>
-
-										</tr>
-
-			<tr><td align="center" colspan="2">
-		</td></tr>
-
-		</table>
-		<script type="text/javascript">
-		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-		</script>
-		
-		<script type="text/javascript">
-		try {
-		var pageTracker = _gat._getTracker("UA-10917923-3");
-		pageTracker._trackPageview();
-		} catch(err) {}</script>
-
-					<!-- *** *** -->
 			
-					<table width="100%" cellpadding="0" cellspacing="0" border="0">
-						<tr><td><img src="https://my.iit.edu/cps/images/misc/dot-blank.gif" width="1" height="5"></td></tr>
-						<tr><td>
-			<table width="100%" cellpadding="5" cellspacing="5" border="0">
-				<tr><td colspan="3"><img src="https://my.iit.edu/cps/images/misc/dot-blank.gif" title="" width="1" height="5"></td></tr>
-				<tr>
-					<td valign="TOP" width="100%"><img src="https://my.iit.edu/cps/images/misc/dot-blank.gif" title="" width="1" height="5"><br clear="all"><img src="https://my.iit.edu/cps/images/misc/dot-blank.gif" title="" width="2" height="40" align="LEFT" hspace="0"><span id="copyright"></span></td>
-					<td valign="TOP" align="RIGHT" nowrap><img src="https://my.iit.edu/cps/images/misc/dot-blank.gif" title="" width="1" height="5"><br><span class="totop" id="totop_ftr"><a href="#TOP" onMouseOver="window.status=''; return true;">Top</a></span></td>
-					<td width="179" align="RIGHT"><a href="http://www.iit.edu"><img src="https://my.iit.edu/cps/images/misc/foot_logo.gif" alt="Illinois Institute of Technology"  title="Illinois Institute of Technology" width="179" height="52" border="0"></a></td>
+			<table id="login_box_container">
+
+					<tr>
+									
+							<td id="leftColumn"><br />
+
+									<table>
+
+											<tr >
+													<td id="sideHeader">Login</td>
+											</tr>
+											<tr>
+													<td id="sideContent">
+
+															<form name="userid" id="userid" onsubmit="xferFocus(this); return false;">
+																	Username: <br />
+																	<script>
+
+										document.writeln("<input class=\"textform\" type=\"text\" name=\"user\" size=\"" + size + "\" tabindex=1 onFocus=\"hadFocus(true);\"><br />");
+
+									</script>
+															</form>
+															<form action="https://my.iit.edu/cp/home/login" method="get" name="cplogin" id="cplogin" onsubmit="login(); return false;">
+																	Password: <br />
+																	<script>
+
+										document.writeln("<input class=\"textform\" type=\"password\" name=\"pass\" size=\"" + size + "\" tabindex=2 onFocus=\"hadFocus(true);\">");
+
+									</script>
+																	<input type="hidden" name="user" value=""/>
+																	<input type="hidden" name="uuid" value=""/>
+
+																	<br />
+			<br>
+
+			<input type="button" class="btn" name="login_btn" value="Login" onclick="login();" tabindex="3"/>
+			<input type="button" class="btn" name="cancel_btn" value="Clear" onclick="doCancel();" tabindex="4"/>
+			<br><br>
+
+			<script>
+			 document.writeln("<span class=\"text10\" ><a href=\"https://my.iit.edu/cp/myqa/answer/start\" onMouseover=\"window.status=''; return true;\">Forget Password?</a></span>");
+			</script>
+			<br><br>
+															</form>
+													</td>
+	<!-- Greg -->
+											</tr>
+											<tr>
+												 
+			 <td class="btn">
+											</tr>
+
+				<tr><td  colspan="1">
+			</td></tr>
+
+			</table>
+			<script>
+			var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+			document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+			</script>
+			
+			<script>
+			try {
+			var pageTracker = _gat._getTracker("UA-10917923-3");
+			pageTracker._trackPageview();
+			} catch(err) {}</script>
+
+						<!-- *** *** -->
+				
+						<table>
+							<tr><td><img src="https://my.iit.edu/cps/images/misc/dot-blank.gif" alt="file photo"></td></tr>
+							<tr><td>
+				<table>
+					<tr><td colspan="3"><img src="https://my.iit.edu/cps/images/misc/dot-blank.gif" alt="file photo" title="" ></td></tr>
+					<tr>
+						<td><img src="https://my.iit.edu/cps/images/misc/dot-blank.gif" alt="file photo" title=""><br> clear="all"><img src="https://my.iit.edu/cps/images/misc/dot-blank.gif" alt="file pohoto" title="" ><span id="copyright"></span></td>
+						<td><img src="https://my.iit.edu/cps/images/misc/dot-blank.gif" alt="file photo" title="" ><br><span class="totop" id="totop_ftr"><a href="#TOP" onMouseOver="window.status=''; return true;">Top</a></span></td>
+						<td ><a href="http://www.iit.edu"><img src="https://my.iit.edu/cps/images/misc/foot_logo.gif" alt="Illinois Institute of Technology"  title="Illinois Institute of Technology"></a></td>
+					</tr>
+				</table>
+				<script>
+				function OpenNotice()
+				{
+						stats='resizable=no,scrollbars=no,toolbar=no,location=no,directories=no,status=no,menubar=no,';
+						stats += 'width=600,height=400';
+						noticeWindow = window.open ( /*URL*/ "/jsp/misc/tmNotice.jsp","tmNotice",stats)
+						setTimeout ("noticeWindow.focus ()", 500);
+				}
+				</script>
+
+			</td></tr>
+						</table>
+					</td>
 				</tr>
 			</table>
-			<script language="JavaScript">
-			function OpenNotice()
-			{
-					stats='resizable=no,scrollbars=no,toolbar=no,location=no,directories=no,status=no,menubar=no,';
-					stats += 'width=600,height=400';
-					noticeWindow = window.open ( /*URL*/ "/jsp/misc/tmNotice.jsp","tmNotice",stats)
-					setTimeout ("noticeWindow.focus ()", 500);
-			}
-			</script>
-
-		</td></tr>
-					</table>
-				</td>
-			</tr>
-		</table>
-</div>
+	</div>
 	</body>
 </html>
